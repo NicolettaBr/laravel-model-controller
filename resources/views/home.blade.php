@@ -8,5 +8,16 @@
 </head>
 <body>
     <h1>Lista dei film</h1>
+    
+    <ul>
+        @foreach($movies as $movie)
+            <li> 
+                <div>Title: {{$movie->title}}</div>
+                <div>Original title: {{$movie->original_title}}</div>
+                <div>Nationality: {{$movie->nationality}}</div>
+            </li>
+        @endforeach    
+    </ul>
+
 </body>
 </html>

@@ -10,7 +10,11 @@ class HomeController extends Controller
 {
     public function index(){
         $movies = Movie::all();
+        
+        $data = [
+            'movies'=> $movies
+        ];
 
-        return view('home');
+        return view('home', $data);
     }
 }
